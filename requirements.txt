@@ -1,0 +1,2 @@
+beautifulsoup4==4.14.3
+epub-utils==0.1.0a1

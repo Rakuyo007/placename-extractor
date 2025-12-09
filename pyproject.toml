@@ -4,4 +4,7 @@ version = "0.1.0"
 description = "A tool that reads novel content and uses large models to extract place names and perform statistics and drawings."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "beautifulsoup4>=4.14.3",
+    "epub-utils>=0.1.0a1",
+]
