@@ -5,6 +5,15 @@ description = "A tool that reads novel content and uses large models to extract 
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "beautifulsoup4>=4.14.3",
-    "epub-utils>=0.1.0a1",
+    "beautifulsoup4==4.14.3",
+    "epub-utils==0.1.0a1",
+    "rapidocr-pdf==0.4.0",
+]
+
+[tool.uv.pip]
+index-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+extra-index-url = [
+    # 更换/追加源写这里
+    "https://mirrors.aliyun.com/pypi/simple",
+    "https://pypi.mirrors.ustc.edu.cn/simple/"
 ]

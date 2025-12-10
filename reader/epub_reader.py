@@ -2,8 +2,11 @@ from epub_utils import Document
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
 
+
 class EpubReader:
     def __init__(self, book_path):
+        if not book_path:
+            raise ValueError("EPUB book path must be provided.")
         self.doc = Document(book_path)
 
     def get_metadata(self):
@@ -66,7 +69,7 @@ class EpubReader:
         """
         Get the main content of the EPUB book by its ID.
         :param id:
-        :return:
+        :return: A dictionary containing the title and content paragraphs.
         """
         content_raw = self.doc.find_content_by_id(id)
         def extract_epub_html(html_str: str):
